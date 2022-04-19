@@ -72,7 +72,7 @@ def stations():
 
     session = Session(engine)
     
-    Stations_results = session.query(Station_Table.station).all()
+    Stations_results = session.query(Station_Table.station, Station_Table.id, Station_Table.name, Station_Table.latitude, Station_Table.longitude, Station_Table.elevation).all()
 
     session.close()
     
